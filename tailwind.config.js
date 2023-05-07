@@ -14,7 +14,9 @@ module.exports = {
       base: "16px",
       lg: "24px",
       text5xl: "40px",
-      text7xl: "72px"
+      text7xl: "72px",
+      text9xl: "80px",
+      text10xl: "120px"
     },
     fontFamily: {
       'sans': ['Barlow', "sans-serif"],
