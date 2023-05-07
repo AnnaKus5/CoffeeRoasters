@@ -12,7 +12,9 @@ module.exports = {
     fontSize: {
       sm: "12px",
       base: "16px",
-      text5xl: "40px"
+      lg: "24px",
+      text5xl: "40px",
+      text7xl: "72px"
     },
     fontFamily: {
       'sans': ['Barlow', "sans-serif"],
@@ -25,7 +27,8 @@ module.exports = {
       "darkGreyBlue": "#333D4B",
       "paleOrange": "#FDD6BA",
       "lightCream": "#FEFCF7",
-      "grey": "#83888F"
+      "grey": "#83888F",
+      "transparent": "transparent"
     },
     extend: {},
   },
