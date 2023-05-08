@@ -9,7 +9,7 @@ export default function HeroSection() {
         backgroundMobile: ``
     }
     return (
-        <div className="grid cols-1 content-center mx-5 mt-10 mb-32 w-82 h-[500px] rounded-lg bg-cover bg-center
+        <div className="grid cols-1 content-center mx-5 mt-10 mb-32 h-[500px] rounded-lg bg-cover bg-center
         bg-[url('../../public/images/home/mobile/image-hero-coffeepress.jpg')]
         sm:bg-[url('../../public/images/home/tablet/image-hero-coffeepress.jpg')]
         md:bg-[url('../../public/images/home/desktop/image-hero-coffeepress.jpg')] md:h-[600px]" 

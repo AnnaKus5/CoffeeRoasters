@@ -5,18 +5,20 @@ module.exports = {
     "./src/**/*.{js,jsx}"],
   theme: {
     screens: {
-      "sm": "375px",
+      "sm": "420px",
       "md": "768px",
+      "xmd": "1200px",
       "lg": "1440px"
     },
     fontSize: {
       sm: "12px",
       base: "16px",
       lg: "24px",
+      textxl: "28px",
       text5xl: "40px",
       text7xl: "72px",
       text9xl: "80px",
-      text10xl: "120px"
+      text10xl: "150px"
     },
     fontFamily: {
       'sans': ['Barlow', "sans-serif"],
@@ -29,6 +31,7 @@ module.exports = {
       "darkGreyBlue": "#333D4B",
       "paleOrange": "#FDD6BA",
       "lightCream": "#FEFCF7",
+      "navyBlue": "#2C343E",
       "grey": "#83888F",
       "transparent": "transparent"
     },

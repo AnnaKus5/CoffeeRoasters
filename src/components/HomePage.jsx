@@ -1,3 +1,4 @@
+import ChooseUsContainer from "./ChooseUsContainer";
 import HeroSection from "./HeroSection";
 import ProductsContainer from "./ProductsContainer";
 
@@ -6,6 +7,7 @@ export default function HomePage () {
         <>
         <HeroSection />
         <ProductsContainer />
+        <ChooseUsContainer />
         </>
     )
 }
