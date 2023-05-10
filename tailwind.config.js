@@ -15,6 +15,7 @@ module.exports = {
       base: "16px",
       lg: "24px",
       textxl: "28px",
+      text2xl: "32px",
       text5xl: "40px",
       text7xl: "72px",
       text9xl: "80px",

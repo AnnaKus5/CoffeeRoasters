@@ -1,6 +1,7 @@
 import ChooseUsContainer from "./ChooseUsContainer";
 import HeroSection from "./HeroSection";
 import ProductsContainer from "./ProductsContainer";
+import SubscriptionStepsContainer from "./SubscriptionStepsContainer";
 
 export default function HomePage () {
     return(
@@ -8,6 +9,7 @@ export default function HomePage () {
         <HeroSection />
         <ProductsContainer />
         <ChooseUsContainer />
+        <SubscriptionStepsContainer />
         </>
     )
 }
