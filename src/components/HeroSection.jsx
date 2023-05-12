@@ -2,9 +2,6 @@ import Button from "./Button"
 
 export default function HeroSection() {
 
-    const styles = {
-        backgroundMobile: ``
-    }
     return (
         <div className="grid cols-1 content-center mx-5 mt-10 mb-32 h-[500px] rounded-lg bg-cover bg-center
         bg-[url('../../public/images/home/mobile/image-hero-coffeepress.jpg')]

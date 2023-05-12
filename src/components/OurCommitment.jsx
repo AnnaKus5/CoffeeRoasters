@@ -4,7 +4,7 @@ import desktopCommitmentImage from "../../public/images/about/desktop/image-comm
 
 export default function OurCommitment() {
     return (
-        <section className="mx-6 mb-[120px] md:flex md:justify-around xmd:justify-center xmd:items-center ">
+        <section className="mx-6 mb-[200px] md:flex md:justify-around xmd:justify-center xmd:items-center md:mb-80">
             <img src={mobileCommitmentImage} className="rounded-lg mb-12 md:hidden" />
             <img src={tabletCommitmentImage} className="rounded-lg hidden md:block xmd:hidden" />
             <img src={desktopCommitmentImage} className="rounded-lg hidden xmd:block" />
