@@ -34,6 +34,7 @@ module.exports = {
       "lightCream": "#FEFCF7",
       "navyBlue": "#2C343E",
       "grey": "#83888F",
+      "lightGrey": "#F4F1EB",
       "transparent": "transparent"
     },
     extend: {},

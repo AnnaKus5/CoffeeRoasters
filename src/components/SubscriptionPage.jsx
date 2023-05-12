@@ -1,5 +1,12 @@
+import SubscriptionConfiguration from "./SubscriptionConfiguration";
+import SubscriptionStep from "./SubscriptionStep";
+import SubscriptionStepsContainer from "./SubscriptionStepsContainer";
+
 export default function SubscriptionPage () {
     return (
-        <p>Subscription Page</p>
+        <div>
+            {/* <SubscriptionStepsContainer /> */}
+            <SubscriptionConfiguration />
+        </div>
     )
 }
