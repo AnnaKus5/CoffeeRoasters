@@ -1,6 +1,8 @@
 import Button from "./Button";
 import SubscriptionStep from "./SubscriptionStep";
 
+//rename component
+
 export default function SubscriptionStepsContainer() {
     return (
         <div className="mt-[700px] mx-6 text-center mb-28 md:mt-[350px] md:text-left xmd:ml-[165px]">
