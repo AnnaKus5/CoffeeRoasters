@@ -25,6 +25,8 @@ export default function SubscriptionConfiguration() {
         }
     )
 
+    const [waitForSelect, setWaitForSelect] = useState("preferences")
+
     let weekCostShipment = "$7.20"
     let twoWeekCostShipment = "$9.60"
     let monthCostShipment = "$12.00"
@@ -114,13 +116,17 @@ export default function SubscriptionConfiguration() {
             header={step.header} 
             options={step.options} 
             id={step.id} 
-            setActiveSelection={setActiveSelection} />
+            activeSelection={activeSelection}
+            setActiveSelection={setActiveSelection}
+            setWaitForSelect={setWaitForSelect} />
         )
     })
 
     return (
         <div className="xmd:flex xmd:justify-center">
             <SubscriptionStepsSidebar
+                waitForSelect={waitForSelect}
+                setWaitForSelect={setWaitForSelect}
                 setActiveSelection={setActiveSelection} />
             <section className="xmd:w-1/2">
                 {selectElements}
