@@ -2,6 +2,7 @@ import { useState } from "react"
 import SelectSection from "./SelectSection"
 import SubscriptionHero from "./SubscriptionHero"
 import SubscriptionStepsSidebar from "./SubscriptionsStepsSidebar"
+import OrderSummary from "./OrderSummary"
 
 export default function SubscriptionConfiguration() {
 
@@ -131,6 +132,7 @@ export default function SubscriptionConfiguration() {
             <section className="xmd:w-1/2">
                 {selectElements}
             </section>
+            <OrderSummary activeSelection={activeSelection} />
         </div>
     )
 }

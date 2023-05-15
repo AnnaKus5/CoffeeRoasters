@@ -24,7 +24,7 @@ export default function SelectSection({ name, active, isDisable, header, options
         })
     }
 
-    const arrow = (<svg onClick={handleActiveSelect} width="19" height="13" className="mt-6" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fillRule="nonzero" /></svg>)
+    const arrow = (<svg onClick={handleActiveSelect} width="19" height="13" className="mt-6 ml-2" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fillRule="nonzero" /></svg>)
     const reverseArrow = (<svg onClick={handleActiveSelect} width="19" height="13" className="block mt-6 rotate-180" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fillRule="nonzero" /></svg>)
 
     const content = options.map(box => {
