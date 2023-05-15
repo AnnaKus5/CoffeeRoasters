@@ -1,8 +1,8 @@
 import ChooseUs from "./ChooseUs";
 import AdvantageBox from "./AdvantageBox";
-import coffeeBeanImage from "../../public/images/home/desktop/icon-coffee-bean.svg"
-import giftImage from "../../public/images/home/desktop/icon-gift.svg"
-import truckImage from "../../public/images/home/desktop/icon-truck.svg"
+import coffeeBeanImage from "../images/home/desktop/icon-coffee-bean.svg"
+import giftImage from "../images/home/desktop/icon-gift.svg"
+import truckImage from "../images/home/desktop/icon-truck.svg"
 
 
 export default function ChooseUsContainer () {

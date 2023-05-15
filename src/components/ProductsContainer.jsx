@@ -1,8 +1,8 @@
 import SingleProduct from "./SingleProduct"
-import granEspressoImage from "../../public/images/home/desktop/image-gran-espresso.png"
-import planaltoImage from "../../public/images/home/desktop/image-planalto.png"
-import piccolloImage from "../../public/images/home/desktop/image-planalto.png"
-import dancheImage from "../../public/images/home/desktop/image-danche.png"
+import granEspressoImage from "../images/home/desktop/image-gran-espresso.png"
+import planaltoImage from "../images/home/desktop/image-planalto.png"
+import piccolloImage from "../images/home/desktop/image-planalto.png"
+import dancheImage from "../images/home/desktop/image-danche.png"
 
 export default function ProductsContainer() {
 

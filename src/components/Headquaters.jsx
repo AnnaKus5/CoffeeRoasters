@@ -1,7 +1,7 @@
 import SingleHeadquater from "./SingleHeadquater";
-import ukImage from "../../public/images/about/desktop/illustration-uk.svg"
-import canadaImage from "../../public/images/about/desktop/illustration-canada.svg"
-import australiaImage from "../../public/images/about/desktop/illustration-australia.svg"
+import ukImage from "../images/about/desktop/illustration-uk.svg"
+import canadaImage from "../images/about/desktop/illustration-canada.svg"
+import australiaImage from "../images/about/desktop/illustration-australia.svg"
 
 export default function Headquaters () {
 

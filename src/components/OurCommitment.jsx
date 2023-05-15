@@ -1,6 +1,6 @@
-import mobileCommitmentImage from "../../public/images/about/mobile/image-commitment.jpg"
-import tabletCommitmentImage from "../../public/images/about/tablet/image-commitment.jpg"
-import desktopCommitmentImage from "../../public/images/about/desktop/image-commitment.jpg"
+import mobileCommitmentImage from "../images/about/mobile/image-commitment.jpg"
+import tabletCommitmentImage from "../images/about/tablet/image-commitment.jpg"
+import desktopCommitmentImage from "../images/about/desktop/image-commitment.jpg"
 
 export default function OurCommitment() {
     return (
