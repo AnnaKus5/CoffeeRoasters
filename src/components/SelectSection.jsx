@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import SelectBox from "./SelectBox"
 
 export default function SelectSection({ name, active, isDisable, header, options, activeSelection, setActiveSelection, setWaitForSelect }) {
@@ -8,6 +8,8 @@ export default function SelectSection({ name, active, isDisable, header, options
         2: false,
         3: false
     })
+
+    const section = useRef("")
 
 
     function handleActiveSelect() {
@@ -36,12 +38,13 @@ export default function SelectSection({ name, active, isDisable, header, options
                 name={name} 
                 activeSelection={activeSelection}
                 setActiveSelection={setActiveSelection}
-                setWaitForSelect={setWaitForSelect} />
+                setWaitForSelect={setWaitForSelect}
+                section={section} />
         )
     })
 
     return (
-        <div className="mx-6 mb-24">
+        <div id={name} className="mx-6 mb-24">
             <div className={`flex justify-between ${isDisable ? "opacity-30" : ""}`}>
                 <h2 className="mb-[18px] font-serif text-grey text-lg lg:text-text5xl">{header}</h2>
                 {active && !isDisable ? reverseArrow : arrow}

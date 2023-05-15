@@ -11,6 +11,14 @@ export default function SubscriptionStepsSidebar ({waitForSelect, setWaitForSele
         })
 
         setWaitForSelect(selectedSection)
+
+        const scrollSection = document.getElementById(selectedSection)
+
+        scrollSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'center'
+        })
     }
 
     return (

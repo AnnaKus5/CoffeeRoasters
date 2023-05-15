@@ -1,8 +1,10 @@
-export default function SelectBox ({header, description, active, id, name, setSelectOptionsState, activeSelection, setActiveSelection, setWaitForSelect}) {
+export default function SelectBox({ header, description, active, id, name, setSelectOptionsState, activeSelection, setActiveSelection, setWaitForSelect, section }) {
 
     function handleClick(e) {
         const id = e.target.getAttribute("data-id")
         const preferences = e.target.getAttribute("data-preferences")
+        const nextSection = name === "quantity" && activeSelection.grind.isDisable ? "deliveries" : activeSelection[preferences].next
+
         setSelectOptionsState(() => {
             const newState = {
                 1: false,
@@ -21,12 +23,12 @@ export default function SelectBox ({header, description, active, id, name, setSe
         })
 
         setActiveSelection(prev => {
-            const newState = {...prev}
+            const newState = { ...prev }
             let nextSelect = newState[preferences].next
             newState[preferences].selectedByUser = header
             if (header === "Capsule" && name === "preferences") {
                 newState.grind.isDisable = true
-            } 
+            }
             if (name === "preferences" && header !== "Capsule") {
                 newState.grind.isDisable = false
             }
@@ -39,10 +41,20 @@ export default function SelectBox ({header, description, active, id, name, setSe
             return newState
         })
 
+        const scrollElement = document.getElementById(nextSection)
+
+        if (name !== "deliveries") {
+            scrollElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'center'
+            })
+
+        }
     }
 
     // archivePlan = useRef()
-    // archivePlan.current.scrollIntoView({
+    // section.current.scrollIntoView({
     //     behavior: 'smooth',
     //     block: 'nearest',
     //     inline: 'center'
