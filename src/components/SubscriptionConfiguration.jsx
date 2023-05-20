@@ -6,15 +6,15 @@ import OrderSummary from "./OrderSummary"
 
 export default function SubscriptionConfiguration() {
 
-    const [userPreferences, setUserPreferences] = useState(
-        {
-            preferences: "",
-            bean: "",
-            quantity: "",
-            grind: "",
-            deliveries: ""
-        }
-    )
+    // const [userPreferences, setUserPreferences] = useState(
+    //     {
+    //         preferences: "",
+    //         bean: "",
+    //         quantity: "",
+    //         grind: "",
+    //         deliveries: ""
+    //     }
+    // )
 
     const [activeSelection, setActiveSelection] = useState(
         {
@@ -25,6 +25,14 @@ export default function SubscriptionConfiguration() {
             deliveries: {isActive: false, isDisable: false, selectedByUser: "", next: false}
         }
     )
+
+    const userPreferences = [
+        {select: activeSelection.preferences.selectedByUser},
+        {select: activeSelection.bean.selectedByUser},
+        {select: activeSelection.quantity.selectedByUser},
+        {select: activeSelection.grind.selectedByUser},
+        {select: activeSelection.deliveries.selectedByUser},
+    ]
 
     const [waitForSelect, setWaitForSelect] = useState("preferences")
 
@@ -131,8 +139,14 @@ export default function SubscriptionConfiguration() {
                 setActiveSelection={setActiveSelection} />
             <section className="xmd:w-1/2">
                 {selectElements}
+                <OrderSummary 
+                activeSelection={activeSelection} 
+                userPreferences={userPreferences}
+                weekCostShipment={weekCostShipment}
+                twoWeekCostShipment={twoWeekCostShipment}
+                monthCostShipment={monthCostShipment}
+                />
             </section>
-            <OrderSummary activeSelection={activeSelection} />
         </div>
     )
 }

@@ -53,17 +53,9 @@ export default function SelectBox({ header, description, active, id, name, setSe
         }
     }
 
-    // archivePlan = useRef()
-    // section.current.scrollIntoView({
-    //     behavior: 'smooth',
-    //     block: 'nearest',
-    //     inline: 'center'
-    // })
-
-
 
     return (
-        <div onClick={(e) => handleClick(e)} data-id={id} data-preferences={name} className={`mb-4 px-6 py-6 rounded-lg ${active ? '' : 'hover:bg-paleOrange'} ${active ? 'bg-darkCyan' : 'bg-lightGrey'} sm:mx-[10px] sm:h-[250px] sm:py-0 xmd:w-56`}>
+        <div onClick={(e) => handleClick(e)} data-id={id} data-preferences={name} className={`mb-4 px-6 py-6 rounded-lg ${active ? '' : 'hover:bg-paleOrange'} ${active ? 'bg-darkCyan' : 'bg-lightGrey'} sm:mx-[10px] sm:h-[250px] sm:py-0 md:mx-0 md:w-56`}>
             <h3 data-id={id} data-preferences={name} className="font-serif text-lg sm:leading-6 sm:mt-8 sm:mb-6">{header}</h3>
             <p data-id={id} data-preferences={name}>{description}</p>
         </div>

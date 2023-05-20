@@ -49,7 +49,7 @@ export default function SelectSection({ name, active, isDisable, header, options
                 <h2 className="mb-[18px] font-serif text-grey text-lg lg:text-text5xl">{header}</h2>
                 {active && !isDisable ? reverseArrow : arrow}
             </div>
-            <div className="sm:flex ">
+            <div className="sm:flex md:justify-between ">
             {active && !isDisable ? content : ""}
             </div>
         </div>
