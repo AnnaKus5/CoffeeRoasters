@@ -1,61 +1,9 @@
 import { useState } from "react"
 import SelectSection from "./SelectSection"
-import SubscriptionHero from "./SubscriptionHero"
 import SubscriptionStepsSidebar from "./SubscriptionsStepsSidebar"
 import OrderSummary from "./OrderSummary"
 
-export default function SubscriptionConfiguration() {
-
-    // const [userPreferences, setUserPreferences] = useState(
-    //     {
-    //         preferences: "",
-    //         bean: "",
-    //         quantity: "",
-    //         grind: "",
-    //         deliveries: ""
-    //     }
-    // )
-
-    const [activeSelection, setActiveSelection] = useState(
-        {
-            preferences: {isActive: true, isDisable: false, selectedByUser: "", next: "bean"},
-            bean: {isActive: false, isDisable: false, selectedByUser: "", next: "quantity"},
-            quantity: {isActive: false, isDisable: false, selectedByUser: "", next: "grind"},
-            grind: {isActive: false, isDisable: false, selectedByUser: "", next: "deliveries"},
-            deliveries: {isActive: false, isDisable: false, selectedByUser: "", next: false}
-        }
-    )
-
-    const userPreferences = [
-        {select: activeSelection.preferences.selectedByUser},
-        {select: activeSelection.bean.selectedByUser},
-        {select: activeSelection.quantity.selectedByUser},
-        {select: activeSelection.grind.selectedByUser},
-        {select: activeSelection.deliveries.selectedByUser},
-    ]
-
-    const [waitForSelect, setWaitForSelect] = useState("preferences")
-
-    let weekCostShipment = "$7.20"
-    let twoWeekCostShipment = "$9.60"
-    let monthCostShipment = "$12.00"
-
-    if (activeSelection.quantity.selectedByUser === "250g") {
-        weekCostShipment = "$7.20"
-        twoWeekCostShipment = "$9.60"
-        monthCostShipment = "$12.00"
-    }
-    if (activeSelection.quantity.selectedByUser === "500g") {
-        weekCostShipment = "$13.00"
-        twoWeekCostShipment = "$17.50"
-        monthCostShipment = "$22.00"
-    }
-    if (activeSelection.quantity.selectedByUser === "1000g") {
-        weekCostShipment = "$22.00"
-        twoWeekCostShipment = "$32.00"
-        monthCostShipment = "$42.00"
-    }
-    
+export default function SubscriptionConfiguration({activeSelection, setActiveSelection, userPreferences, weekCostShipment, twoWeekCostShipment, monthCostShipment, setDisplayPopUp, waitForSelect, setWaitForSelect}) {    
 
     const content = [
         {
@@ -145,6 +93,7 @@ export default function SubscriptionConfiguration() {
                 weekCostShipment={weekCostShipment}
                 twoWeekCostShipment={twoWeekCostShipment}
                 monthCostShipment={monthCostShipment}
+                setDisplayPopUp={setDisplayPopUp}
                 />
             </section>
         </div>

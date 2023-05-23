@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import SubscriptionStep from "./SubscriptionStep";
 
@@ -13,7 +14,9 @@ export default function SubscriptionStepsContainer() {
                 <SubscriptionStep number="03" title="Receive and enjoy!" description="We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning 
                 world-class coffees curated to provide a distinct tasting experience." />
             </div>
-            <Button isButtonActive={true}/>
+            <Link to="subscription">
+                <Button isButtonActive={true}/>
+            </Link>
         </div>
     )
 }
