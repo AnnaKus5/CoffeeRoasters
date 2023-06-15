@@ -7,7 +7,7 @@ import truckImage from "../images/home/desktop/icon-truck.svg"
 
 export default function ChooseUsContainer () {
     return (
-        <section className="relative">
+        <section className="relative z-10">
             <ChooseUs />
             <div className="absolute left-0 right-0 my-0 mx-auto top-[305px] md:top-[275px] xmd:flex xmd:justify-center xmd:top-[346px]">
                 <AdvantageBox img={coffeeBeanImage} title="Best quality" description="Discover an endless variety of the world’s best artisan coffee from each of our roasters."/>

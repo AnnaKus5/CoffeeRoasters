@@ -3,15 +3,13 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useState } from "react";
 
-export default function Main () {
-
-    const [displayPopUp, setDisplayPopUp] = useState(false)
+export default function Main() {
 
     return (
         <>
-        <Header displayPopUp={displayPopUp}/>
-        <Outlet context={{displayPopUp, setDisplayPopUp}}/>
-        <Footer displayPopUp={displayPopUp}/>
+            <Header />
+            <Outlet />
+            <Footer />
         </>
     )
 }

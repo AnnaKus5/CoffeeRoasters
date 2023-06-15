@@ -3,7 +3,7 @@ import SelectSection from "./SelectSection"
 import SubscriptionStepsSidebar from "./SubscriptionsStepsSidebar"
 import OrderSummary from "./OrderSummary"
 
-export default function SubscriptionConfiguration({activeSelection, setActiveSelection, userPreferences, weekCostShipment, twoWeekCostShipment, monthCostShipment, setDisplayPopUp, waitForSelect, setWaitForSelect}) {    
+export default function SubscriptionConfiguration({ activeSelection, setActiveSelection, userPreferences, weekCostShipment, twoWeekCostShipment, monthCostShipment, setDisplayPopUp, waitForSelect, setWaitForSelect }) {
 
     const content = [
         {
@@ -65,17 +65,17 @@ export default function SubscriptionConfiguration({activeSelection, setActiveSel
 
     const selectElements = content.map(step => {
         return (
-            <SelectSection 
-            key={step.name} 
-            name={step.name} 
-            active={step.active}
-            isDisable={step.disable} 
-            header={step.header} 
-            options={step.options} 
-            id={step.id} 
-            activeSelection={activeSelection}
-            setActiveSelection={setActiveSelection}
-            setWaitForSelect={setWaitForSelect} />
+            <SelectSection
+                key={step.name}
+                name={step.name}
+                active={step.active}
+                isDisable={step.disable}
+                header={step.header}
+                options={step.options}
+                id={step.id}
+                activeSelection={activeSelection}
+                setActiveSelection={setActiveSelection}
+                setWaitForSelect={setWaitForSelect} />
         )
     })
 
@@ -87,13 +87,10 @@ export default function SubscriptionConfiguration({activeSelection, setActiveSel
                 setActiveSelection={setActiveSelection} />
             <section className="xmd:w-1/2">
                 {selectElements}
-                <OrderSummary 
-                activeSelection={activeSelection} 
-                userPreferences={userPreferences}
-                weekCostShipment={weekCostShipment}
-                twoWeekCostShipment={twoWeekCostShipment}
-                monthCostShipment={monthCostShipment}
-                setDisplayPopUp={setDisplayPopUp}
+                <OrderSummary
+                    activeSelection={activeSelection}
+                    userPreferences={userPreferences}
+                    setDisplayPopUp={setDisplayPopUp}
                 />
             </section>
         </div>

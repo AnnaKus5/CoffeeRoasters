@@ -2,11 +2,10 @@ import SubscriptionConfiguration from "./SubscriptionConfiguration";
 import SubscriptionHero from "./SubscriptionHero";
 import OrderSummaryPopup from "./OrderSummaryPopup";
 import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
 
 export default function SubscriptionPage() {
 
-    const {displayPopUp, setDisplayPopUp} = useOutletContext()
+    const [displayPopUp, setDisplayPopUp] = useState(false)
     
     const [waitForSelect, setWaitForSelect] = useState("preferences")
     const [activeSelection, setActiveSelection] = useState(
@@ -50,7 +49,8 @@ export default function SubscriptionPage() {
 
     return (
         <>
-            <div className={`${displayPopUp ? "bg-black opacity-30" : ""}`}>
+            <div>
+            <div className={`${displayPopUp ? "fixed h-full w-full top-0 bottom-0 bg-white opacity-70" : "hidden"}`}></div>
                 <SubscriptionHero />
                 <SubscriptionConfiguration
                     activeSelection={activeSelection}

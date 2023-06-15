@@ -1,20 +1,18 @@
 import { useState } from "react"
 import Button from "./Button.jsx"
-import OrderSummaryPopup from "./OrderSummaryPopup.jsx"
 
-export default function OrderSummary({ activeSelection, userPreferences, setDisplayPopUp, weekCostShipment, twoWeekCostShipment, monthCostShipment  }) {
+export default function OrderSummary({ activeSelection, userPreferences, setDisplayPopUp }) {
 
-    // const [displayPopUp, setDisplayPopUp] = useState(false)
-    // const isButtonActive = userPreferences.every(section => section.select !== "")
-    let isButtonActive
-
+    
     const preferences = activeSelection.preferences.selectedByUser
     const bean = activeSelection.bean.selectedByUser
     const quantity = activeSelection.quantity.selectedByUser
     const grind = activeSelection.grind.selectedByUser
     const deliveries = activeSelection.deliveries.selectedByUser
     const space = "_____"
-
+    
+    let isButtonActive
+    
     if (preferences === "Capsule") {
         isButtonActive = userPreferences.filter(select => select.name !== "grind").every(section => section.select !== "")
     } else {
@@ -38,7 +36,7 @@ export default function OrderSummary({ activeSelection, userPreferences, setDisp
             setDisplayPopUp(true)
         }
     }
-    // className=" bg-black opacity-50"
+
     return (
         <div className={`text-center mb-[120px]`}>
             <div className="mx-6 mb-14 bg-navyBlue px-6 py-8 rounded-lg text-left">
@@ -48,17 +46,6 @@ export default function OrderSummary({ activeSelection, userPreferences, setDisp
             <Button 
                 isButtonActive={isButtonActive}
                 handleClick={handleClick}/>   
-            {/* <OrderSummaryPopup 
-                displayPopUp={displayPopUp}
-                preferences={preferences}
-                bean={bean}
-                quantity={quantity}
-                grind={grind}
-                deliveries={deliveries}
-                weekCostShipment={weekCostShipment}
-                twoWeekCostShipment={twoWeekCostShipment}
-                monthCostShipment={monthCostShipment}
-            /> */}
         </div>
     )
 }
