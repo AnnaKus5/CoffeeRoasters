@@ -8,7 +8,7 @@ export default function HeroSection() {
           plan_type: 'custom',
           timestamp: new Date().toISOString(),
         })
-      };
+      }
       
 
     return (
