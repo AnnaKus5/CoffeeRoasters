@@ -2,9 +2,9 @@ export default function AboutUsHero () {
     
     return (
         <div className="grid cols-1 content-center mx-5 mt-10 mb-[120px] h-[500px] rounded-lg bg-cover bg-center
-        bg-[url('../images/about/mobile/image-hero-whitecup.jpg')]
-        sm:bg-[url('../images/about/tablet/image-hero-whitecup.jpg')]
-        md:bg-[url('../images/about/desktop/image-hero-whitecup.jpg')] md:h-[600px]" 
+        bg-[url('/images/about/mobile/image-hero-whitecup.jpg')]
+        sm:bg-[url('/images/about/tablet/image-hero-whitecup.jpg')]
+        md:bg-[url('/images/about/desktop/image-hero-whitecup.jpg')] md:h-[600px]" 
          >
             <div className="mx-6 sm:ml-14 sm:w-[400px] md:w-[500px] text-center sm:text-left">
             <h1 className="font-serif text-text2xl text-white text-center leading-10 mb-6 sm:text-left xmd:text-text5xl xmd:leading-[72px]">About Us</h1>
