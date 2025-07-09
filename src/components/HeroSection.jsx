@@ -3,12 +3,28 @@ import Button from "./Button"
 
 export default function HeroSection() {
 
+    // const handleCreatePlanClick = () => {
+    //     // window.klaviyo?.track('Clicked Create Plan', {
+    //     //   plan_type: 'custom',
+    //     //   timestamp: new Date().toISOString(),
+    //     // })
+    //   }
+
     const handleCreatePlanClick = () => {
-        window.klaviyo?.track('Clicked Create Plan', {
-          plan_type: 'custom',
-          timestamp: new Date().toISOString(),
-        })
-      }
+        const klaId = document.cookie
+          .split('; ')
+          .find(row => row.startsWith('__kla_id='))
+          ?.split('=')[1];
+      
+      
+        window._learnq.push(['identify', { $anonymous_id: klaId }]);
+      
+        window._learnq.push(['track', 'Clicked Create Plan', {
+            plan_type: 'custom',
+            timestamp: new Date().toISOString(),
+          }]);
+      };
+      
       
 
     return (
