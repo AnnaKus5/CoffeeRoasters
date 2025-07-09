@@ -3,6 +3,14 @@ import Button from "./Button"
 
 export default function HeroSection() {
 
+    const handleCreatePlanClick = () => {
+        window.klaviyo?.track('Clicked Create Plan', {
+          plan_type: 'custom',
+          timestamp: new Date().toISOString(),
+        })
+      };
+      
+
     return (
         <div className="grid cols-1 content-center mx-5 mt-10 mb-32 h-[500px] rounded-lg bg-cover bg-center
             bg-[url('/images/home/mobile/image-hero-coffeepress.jpg')]
@@ -12,7 +20,7 @@ export default function HeroSection() {
                 <h1 className="font-serif text-text5xl text-white text-center leading-10 mb-6 sm:text-left md:text-text7xl md:leading-[72px]">Great coffee made simple.</h1>
                 <p className="text-white text-center text-[15px] mx-6 mb-10 sm:mx-0 sm:text-left md:text-base">Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.</p>
                 <Link to="subscription" >
-                    <Button isButtonActive={true} />
+                    <Button handleClick={handleCreatePlanClick} isButtonActive={true} />
                 </Link>
 
             </div>
